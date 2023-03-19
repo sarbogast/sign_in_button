@@ -37,6 +37,9 @@ class SignInButton extends StatelessWidget {
   /// Defaults to [Clip.none], and must not be null.
   final Clip clipBehavior;
 
+  /// Max width is default to be 1/1.5 of the screen
+  final double? maxWidth;
+
   /// The constructor is fairly self-explanatory.
   const SignInButton(
     this.button, {
@@ -48,6 +51,7 @@ class SignInButton extends StatelessWidget {
     this.text,
     this.elevation = 2.0,
     this.clipBehavior = Clip.none,
+    this.maxWidth,
   })  : assert(
           mini != true ||
               !(button == Buttons.google ||
@@ -95,6 +99,7 @@ class SignInButton extends StatelessWidget {
           shape: shape,
           height: 36.0,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.facebook:
       case Buttons.facebookNew:
@@ -125,6 +130,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.gitHub:
         return SignInButtonBuilder(
@@ -138,6 +144,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.apple:
       case Buttons.appleDark:
@@ -158,6 +165,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.linkedIn:
         return SignInButtonBuilder(
@@ -171,6 +179,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.pinterest:
         return SignInButtonBuilder(
@@ -184,6 +193,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.tumblr:
         return SignInButtonBuilder(
@@ -197,6 +207,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.twitter:
         return SignInButtonBuilder(
@@ -210,6 +221,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.reddit:
         return SignInButtonBuilder(
@@ -223,6 +235,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.quora:
         return SignInButtonBuilder(
@@ -235,6 +248,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.yahoo:
         return SignInButtonBuilder(
@@ -247,6 +261,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.hotmail:
         return SignInButtonBuilder(
@@ -259,6 +274,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.xbox:
         return SignInButtonBuilder(
@@ -271,6 +287,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.microsoft:
         return SignInButtonBuilder(
@@ -283,6 +300,7 @@ class SignInButton extends StatelessWidget {
           padding: padding,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.anonymous:
         return SignInButtonBuilder(
@@ -299,6 +317,7 @@ class SignInButton extends StatelessWidget {
           shape: shape,
           height: 36.0,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
       case Buttons.email:
       default:
@@ -313,6 +332,7 @@ class SignInButton extends StatelessWidget {
           backgroundColor: Colors.grey[700]!,
           shape: shape,
           clipBehavior: clipBehavior,
+          width: maxWidth,
         );
     }
   }
